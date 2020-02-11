@@ -267,21 +267,18 @@ let prodView = createteElWithClass("div", "product-view");
 
 function generateMainContent() {
 
-  // let mainCont = document.querySelector(".main-content");
-  // let container = createteElWithClass("div", "container");
-  let prodViewSwitch = createteElWithClass("div", "product-view-swtcher");
-  let btnGrid = createteElWithClass("button", "btn");
-  btnGrid.setAttribute("id", "btnGrid");
-  btnGrid.innerText = "Grid view";
+  // let prodViewSwitch = createteElWithClass("div", "product-view-swtcher");
+  // let btnGrid = createteElWithClass("button", "btn");
+  // btnGrid.setAttribute("id", "btnGrid");
+  // btnGrid.innerText = "Grid view";
 
-  let btnList = createteElWithClass("button", "btn");
-  btnList.setAttribute("id", "btnList");
-  btnList.innerText = "List view";
+  // let btnList = createteElWithClass("button", "btn");
+  // btnList.setAttribute("id", "btnList");
+  // btnList.innerText = "List view";
 
-  prodViewSwitch.append(btnGrid, btnList);
-  // let prodView = createteElWithClass("div", "product-view");
-  container.appendChild(prodViewSwitch);
-  console.log(gridView);
+  // prodViewSwitch.append(btnGrid, btnList);
+  // container.appendChild(prodViewSwitch);
+
 
 
 
@@ -305,7 +302,7 @@ function createteElWithClass(el, cls) {
 }
 
 let elsForFiltering = ["ветчина", "помидоры", "шампиньоны"];
-/*Переписать вот эту штуцю: */
+
 function generateView(arr) {
 
   if (gridView) {
@@ -472,7 +469,6 @@ function filterListeners() {
     if (checkedInputs.length == 0) {
       alert("Выберете хотя бы одно из значений");
     }
-    // console.log(checkedInputs);
   }
 
 
@@ -493,7 +489,7 @@ function filterListeners() {
 
 
     });
-    console.log(filteredArr);
+    // console.log(filteredArr);
 
   }
 
