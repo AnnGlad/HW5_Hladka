@@ -117,6 +117,11 @@ footer {
   border: none;
   border-radius: 5px;
   padding: .5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: .9;
 }
 
 .btn:not(:last-child) {
@@ -141,7 +146,23 @@ footer {
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: flex-start;
-  margin-bottom: 15px;
+  margin: 15px 0;
+}
+
+.product-view-swtcher .btn {
+  background: #fff;
+  color: #444;
+  border: 1px solid #ccc;
+}
+
+.product-view-swtcher .btn.active {
+  background: #444;
+  color: #fff;
+  border-color: transparent;
+}
+
+.product-view-swtcher .btn i {
+  font-size: 1.2rem;
 }
 
 .prod-holder {
@@ -219,6 +240,7 @@ footer {
 
 .prod-kkal {
   font-size: .8rem;
+  text-align: right;
 }
 
 .prod-name a {
@@ -238,6 +260,10 @@ footer {
 
 .filter-form legend {
   margin-bottom: 10px;
+}
+
+.filter-form input[type="checkbox"] {
+  margin: 0 5px 0 0;
 }
 
 .product-grid .prod-descr:before {
@@ -292,9 +318,7 @@ footer {
   margin-left: -15px;
 }
 
-.col-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
+div[class ^="col-"] {
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -302,15 +326,24 @@ footer {
 .col-2 {
   flex: 0 0 16.666667%;
   max-width: 16.666667%;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
-.col-10 {
-  flex: 0 0 83.333333%;
-  max-width: 83.333333%;
-  padding-right: 15px;
-  padding-left: 15px;
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
 }
 
 .stretch {

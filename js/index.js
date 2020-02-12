@@ -1,182 +1,158 @@
-// function getProductData() {
-//   let imgSrc = document.querySelectorAll(".product-img img");
-//   let productName = document.querySelectorAll(".product-title a");
-//   let ingr = document.getElementsByClassName("product-description");
-//   let price = document.getElementsByClassName("price");
-//   let arr = [];
-
-//   for (let i = 0; i < imgSrc.length; i++) {
-//     let src = imgSrc[i].src;
-//     let obj = new Object();
-//     obj.src = src;
-//     let name = productName[i].innerText;
-//     console.log(name);
-//     obj.name = name;
-
-//     let ingredients = ingr[i].innerText;
-//     console.log(ingredients);
-//     obj.ingredients = ingredients;
-//     let prodPrice = price[i].innerText;
-//     console.log(prodPrice);
-//     obj.price = prodPrice;
-//     arr.push(obj);
-//   }
-//   return arr;
-// }
-
 let pizzaArr = [
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/picca-ohotnichya-xxl_1542267870257.jpeg",
+    src: "img/picca-ohotnichya-xxl_1542267870257.jpeg",
     name: "Пицца Охотничья XXL",
     ingredients: "Охотничьи колбаски, молочные колбаски, сыр моцарелла, вешенки, шампиньоны, сладкий лук, перец болгарский, соус BBQ, соус маринара, петрушка",
     price: "289 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/picca-ohotnichya_1542267892836.jpeg",
+    src: "img/picca-ohotnichya_1542267892836.jpeg",
     name: "Пицца Охотничья",
     ingredients: "Охотничьи колбаски, молочные колбаски, сыр моцарелла, вешенки, шампиньоны, сладкий лук, перец болгарский, соус BBQ, соус маринара, петрушка",
     price: "129 грн"
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/karbonara-metrovaya_1566297127558.jpeg",
+    src: "img/karbonara-metrovaya_1566297127558.jpeg",
     name: "Карбонара метровая",
     ingredients: "Сыр моцарелла, ветчина, грудинка, шампиньоны, пармезан, помидоры черри",
     price: "299 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/amerikano-metrovaya_1566296641461.jpeg",
+    src: "img/amerikano-metrovaya_1566296641461.jpeg",
     name: "Американо метровая",
-    ingredients: "Соус BBQ, соус маринара, сыр моцарелла, горчица, филе куриное sous-vide, колбаски охотничьи, пепперони, лук конфитюр, кукуруза, перец болгарский",
+    ingredients: "Соус BBQ, соус маринара, сыр моцарелла, горчица, филе куриное sous-vide,  охотничьи колбаски, пепперони, лук конфитюр, кукуруза, перец болгарский",
     price: "339 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/margarita_156706066239.jpeg",
+    src: "img/margarita_156706066239.jpeg",
     name: "Маргарита",
     ingredients: "Соус маринара, помидоры, сыр моцарелла, соус песто",
     price: "89 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/karbonara_1567060589165.jpeg",
+    src: "img/karbonara_1567060589165.jpeg",
     name: "Карбонара",
     ingredients: "Сыр моцарелла, ветчина, грудинка, шампиньоны, пармезан, помидоры черри",
     price: "165 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/pollo_1567060914824.jpeg",
+    src: "img/pollo_1567060914824.jpeg",
     name: "Поло",
     ingredients: "Сыр моцарелла, соус маринара, соус ВВQ, чеснок, ананас, филе куриное sous-vide, перец болгарский",
     price: "135 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/gurmeo_1567060279780.jpeg",
+    src: "img/gurmeo_1567060279780.jpeg",
     name: "Гурмео",
-    ingredients: "Соус BBQ, филе куриное sous-vide, ветчина, колбаски охотничьи, пеперони, сыр моцарелла, шампиньоны, лук репчатый, петрушка",
+    ingredients: "Соус BBQ, филе куриное sous-vide, ветчина, охотничьи колбаски, пеперони, сыр моцарелла, шампиньоны, лук репчатый, петрушка",
     price: "165 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/chetyre-syra_1567059967719.jpeg",
+    src: "img/chetyre-syra_1567059967719.jpeg",
     name: "Четыре сыра",
     ingredients: "Сливочный соус, сыр моцарелла, сыр дор-блю, сыр чеддер, груша, сыр пармезан, орех грецкий",
     price: "149 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/amerikano_1567060058936.jpeg",
+    src: "img/amerikano_1567060058936.jpeg",
     name: "Американо",
-    ingredients: "Соус BBQ, соус маринара, сыр моцарелла, горчица, филе куриное sous-vide, колбаски охотничьи, пепперони, конфитюр из лука, кукуруза, перец болгарский",
+    ingredients: "Соус BBQ, соус маринара, сыр моцарелла, горчица, филе куриное sous-vide, охотничьи колбаски, пепперони, конфитюр из лука, кукуруза, перец болгарский",
     price: "149 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/kalcone_1567060522194.jpeg",
+    src: "img/kalcone_1567060522194.jpeg",
     name: "Кальцоне",
     ingredients: "Соус маринара, сыр моцарелла, шампиньоны, сыр дор-блю, помидоры, ветчина, соус песто",
     price: "119 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/bavarskaya_1567060134436.jpeg",
+    src: "img/bavarskaya_1567060134436.jpeg",
     name: "Баварская",
-    ingredients: "Сыр моцарелла, соус маринара, колбаски мюнхенские, колбаски охотничьи, огурец соленый, горчица, лук репчатый, лук зеленый",
+    ingredients: "Сыр моцарелла, соус маринара, колбаски мюнхенские, охотничьи колбаски, огурец соленый, горчица, лук репчатый, лук зеленый",
     price: "145 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/diablo_1567060435236.jpeg",
+    src: "img/diablo_1567060435236.jpeg",
     name: "Диабло",
     ingredients: "Сыр моцарелла, пепперони, перец чили, перец болгарский, лук репчатый, соус ВВQ,соус чили, петрушка",
     price: "159 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/ovoshchnaya_1567060751874.jpeg",
+    src: "img/ovoshchnaya_1567060751874.jpeg",
     name: "Овощная",
     ingredients: "Баклажан, вешенки, перец болгарский, помидоры, соус песто, соус маринара",
     price: "95 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/bavarskaya-metrovaya_156629673225.jpeg",
+    src: "img/bavarskaya-metrovaya_156629673225.jpeg",
     name: "Баварская метровая",
-    ingredients: "Сыр моцарелла, соус маринара, колбаски мюнхенские, колбаски охотничьи, огурец соленый, горчица, лук репчатый, лук зеленый",
+    ingredients: "Сыр моцарелла, соус маринара, колбаски мюнхенские, охотничьи колбаски, огурец соленый, горчица, лук репчатый, лук зеленый",
     price: "319 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/berluskoni-metrovaya_1566296807287.jpeg",
+    src: "img/berluskoni-metrovaya_1566296807287.jpeg",
     name: "Берлускони метровая",
     ingredients: "Сливочный соус из белых грибов, сыр моцарелла, сыр дор-блю, пармезан, шампиньоны, вешенки, соус чесночный, масло трюфельное, петрушка",
     price: "299 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/gurmeo-metrovaya_1566296981221.jpeg",
+    src: "img/gurmeo-metrovaya_1566296981221.jpeg",
     name: "Гурмео метровая",
-    ingredients: "Соус BBQ, филе куриное sous-vide, ветчина, колбаски охотничьи, пепперони, сыр моцарелла, шампиньоны, лук репчатый, петрушка",
+    ingredients: "Соус BBQ, филе куриное sous-vide, ветчина, охотничьи колбаски, пепперони, сыр моцарелла, шампиньоны, лук репчатый, петрушка",
     price: "329 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/diablo-metrovaya_1566297055552.jpeg",
+    src: "img/diablo-metrovaya_1566297055552.jpeg",
     name: "Диабло метровая",
     ingredients: "Сыр моцарелла, пепперони, перец чили, перец болгарский, лук репчатый, соус ВВQ, соус шрирачи, петрушка",
     price: "319 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/polo-metrovaya_1566297194328.jpeg",
+    src: "img/polo-metrovaya_1566297194328.jpeg",
     name: "Поло метровая",
     ingredients: "Сыр моцарелла, соус маринара, соус BBQ, чеснок, ананас, филе куриное sous-vide, перец болгарский",
     price: "289 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/berluskoni_1567060209678.jpeg",
+    src: "img/berluskoni_1567060209678.jpeg",
     name: "Берлускони",
     ingredients: "Сливочный соус из белых грибов, сыр моцарелла, сыр дор-блю, пармезан, шампиньоны, вешенки, соус чесночный, масло трюфельное, петрушка",
     price: "149 грн",
   },
 
   {
-    src: "https://mafia.ua/storage/editor/fotos/480x0/picca-ot-shefa_1567060849842.jpeg",
+    src: "img/picca-ot-shefa_1567060849842.jpeg",
     name: "Пицца от шефа",
-    ingredients: "Говядина sous-vide, черный камамбер, шампиньоны, томат, болгарский перец, руккола, пармезан, сыр моцарелла, каперсы, и соус маринара",
+    ingredients: "Говядина sous-vide, черный камамбер, шампиньоны, помидоры, болгарский перец, руккола, пармезан, сыр моцарелла, каперсы, соус маринара",
     price: "159 грн",
   },
 ]
 
-let gridView = false;
-let listView = false;
 let filterClicked = false;
+
+let view;
+let mainCont = document.querySelector(".main-content");
+let container = createteElWithClass("div", "container");
 
 function fixIngridients() {
   for (let i = 0; i < pizzaArr.length; i++) {
@@ -208,8 +184,30 @@ for (let i = 0; i < pizzaArr.length; i++) {
   let copy = Object.assign({}, pizzaArr[i]);
   pizzaArrCopy.push(copy);
 }
-// console.log(pizzaArrCopy);
 
+let arrIngr = [];
+let elsForFiltering = [];
+for (let i = 0; i < pizzaArr.length; i++) {
+  for (let j = 0; j < pizzaArr[i].ingredients.length; j++) {
+    arrIngr.push(pizzaArr[i].ingredients[j].toLocaleLowerCase());
+  }
+}
+console.log(arrIngr);
+if (arrIngr != 0) {
+  for (let i = 0; i < arrIngr.length; i++) {
+    let isUnique = true;
+    for (let k = 0; k < elsForFiltering.length; k++) {
+      if (arrIngr[i] == elsForFiltering[k]) {
+        isUnique = false;
+        break;
+      }
+    }
+    if (isUnique) {
+      elsForFiltering.push(arrIngr[i]);
+    }
+  }
+}
+console.log(elsForFiltering);
 
 // Modal logic
 let modal = document.getElementById("modal-window");
@@ -224,21 +222,17 @@ function checkModalAnswer() {
   let grid = document.getElementById("gridRadio");
   let list = document.getElementById("listRadio");
   if (grid.checked) {
-    gridView = true;
-    listView = false;
-    console.log("gridView: " + gridView + " , listView: " + listView);
+    view = "grid";
+    console.log(view);
     modal.classList.remove("active");
     generateMainContent();
-    // checkIfRendered();
 
   }
   else if (list.checked) {
-    listView = true;
-    gridView = false;
-    console.log("gridView: " + gridView + " , listView: " + listView);
+    view = "list";
+    console.log(view);
     modal.classList.remove("active");
     generateMainContent();
-    // checkIfRendered();
   } else {
     let form = modal.querySelector("form");
     if (form.querySelector(".err-msg") === null) {
@@ -257,75 +251,96 @@ okBtn.addEventListener("click", function () {
 });
 window.addEventListener("load", askContView);
 
-
-
-//Grid
-let isContentRendered = false;
-let mainCont = document.querySelector(".main-content");
-let container = createteElWithClass("div", "container");
-let prodView = createteElWithClass("div", "product-view");
-
-function generateMainContent() {
-
-  // let prodViewSwitch = createteElWithClass("div", "product-view-swtcher");
-  // let btnGrid = createteElWithClass("button", "btn");
-  // btnGrid.setAttribute("id", "btnGrid");
-  // btnGrid.innerText = "Grid view";
-
-  // let btnList = createteElWithClass("button", "btn");
-  // btnList.setAttribute("id", "btnList");
-  // btnList.innerText = "List view";
-
-  // prodViewSwitch.append(btnGrid, btnList);
-  // container.appendChild(prodViewSwitch);
-
-
-
-
-  generateView(pizzaArr);
-  if (isContentRendered) {
-    if (gridView) {
-      filterListeners();
-    }
-    if (listView) {
-      sortingListeners();
-    }
-  }
-
-
-
-}
 function createteElWithClass(el, cls) {
   let elem = document.createElement(el);
-  elem.classList.add(cls);
+  elem.className = cls;
   return elem;
 }
 
-let elsForFiltering = ["ветчина", "помидоры", "шампиньоны"];
+
+//Grid
+function generateProdViewSwitcher() {
+  let prodViewSwitch = createteElWithClass("div", "product-view-swtcher");
+  let btnGrid = createteElWithClass("button", "btn");
+  btnGrid.setAttribute("id", "btnGrid");
+  let iconGrid = createteElWithClass("i", "fas fa-th-large");
+  btnGrid.append(iconGrid);
+
+  let btnList = createteElWithClass("button", "btn");
+  btnList.setAttribute("id", "btnList");
+  let iconList = createteElWithClass("i", "fas fa-list");
+  btnList.append(iconList);
+
+  prodViewSwitch.append(btnGrid, btnList);
+  container.appendChild(prodViewSwitch);
+  if (view === "grid") {
+    btnGrid.classList.add("active");
+  }
+  if (view === "list") {
+    btnList.classList.add("active");
+  }
+}
+
+function generateMainContent() {
+  generateProdViewSwitcher();
+  generateView(pizzaArr);
+  switchViewBtns();
+}
+
 
 function generateView(arr) {
-
-  if (gridView) {
-    let ViewRow = createteElWithClass("div", "row");
-    prodView.classList.add("product-grid");
-    ViewRow.append(generateFilterBlock(), generateGridGoods(pizzaArr));
-    prodView.append(ViewRow);
+  let prodView = createteElWithClass("div", "product-view");
+  switch (view) {
+    case "grid":
+      let ViewRow = createteElWithClass("div", "row");
+      prodView.classList.toggle("product-grid");
+      ViewRow.append(generateFilterBlock(), generateGridGoods(arr));
+      prodView.append(ViewRow);
+      container.appendChild(prodView);
+      mainCont.appendChild(container);
+      filterListeners();
+      break;
+    case "list":
+      prodView.classList.toggle("product-list");
+      generateSelectSort();
+      prodView.appendChild(generateListGoods(arr));
+      container.appendChild(prodView);
+      mainCont.appendChild(container);
+      sortingListeners();
+      break;
   }
 
-  if (listView) {
-    prodView.classList.add("product-list");
-    generateSelectSort();
-    prodView.appendChild(generateListGoods(pizzaArr));
-  }
-
-  container.appendChild(prodView);
-  mainCont.appendChild(container);
-  isContentRendered = true;
 
 }
 
+function switchViewBtns() {
+  let btnGrid = document.getElementById("btnGrid");
+  let btnList = document.getElementById("btnList");
+  btnGrid.addEventListener("click", function () {
+    if (view === "list") {
+      btnGrid.classList.add("active");
+      btnList.classList.remove("active");
+      document.querySelector(".select-wrap").remove();
+      document.querySelector(".product-view").remove();
+      view = "grid";
+      generateView(pizzaArr);
+    }
+  });
+  btnList.addEventListener("click", function () {
+    if (view === "grid") {
+      btnList.classList.add("active");
+      btnGrid.classList.remove("active");
+      document.querySelector(".product-view").remove();
+      view = "list";
+      generateView(pizzaArr);
+    }
+
+  });
+}
+
+
 function generateFilterBlock() {
-  let filterCol = createteElWithClass("div", "col-2");
+  let filterCol = createteElWithClass("div", "col-3");
   let filter = createteElWithClass("div", "prod-filter");
   let filterP = document.createElement("p");
   filterP.innerText = "Фильтр";
@@ -339,7 +354,7 @@ function generateFilterBlock() {
     input.id = "ingr" + (i + 1);
     input.setAttribute("type", "checkbox");
     input.setAttribute("value", elsForFiltering[i]);
-    legend.append(label, input);
+    legend.append(input, label);
     filterForm.appendChild(legend);
   }
   let btnClear = createteElWithClass("button", "btn");
@@ -356,17 +371,15 @@ function generateFilterBlock() {
   return filterCol;
 }
 function generateGridGoods(arr) {
-  let ViewCol = createteElWithClass("div", "col-10");
+  let ViewCol = createteElWithClass("div", "col-9");
   ViewCol.id = "prod-view"
   let row = createteElWithClass("div", "row");
-  ViewCol.appendChild(row);
+
+
   for (let i = 0; i < arr.length; i++) {
-    let col = createteElWithClass("div", "col-3");
-
-    if (i % 4 === 0) {
+    let col = createteElWithClass("div", "col-6");
+    if (i % 2 === 0) {
       row = createteElWithClass("div", "row");
-
-      ViewCol.appendChild(row);
     }
 
     let prodHolder = createteElWithClass("div", "prod-holder");
@@ -400,6 +413,7 @@ function generateGridGoods(arr) {
     prodHolder.append(prodImg, prodProp);
     col.appendChild(prodHolder);
     row.appendChild(col);
+    ViewCol.append(row);
   }
   return ViewCol;
 }
@@ -478,7 +492,7 @@ function filterListeners() {
       for (i = 0; i < checkedInputs.length; i++) {
         let findEl = checkedInputs[i];
         for (k = 0; k < pizza.ingredients.length; k++) {
-          let pizzaIngr = pizza.ingredients[k];
+          let pizzaIngr = pizza.ingredients[k].toLocaleLowerCase();
           result = (findEl === pizzaIngr);
           if (result) {
             break;
@@ -489,7 +503,6 @@ function filterListeners() {
 
 
     });
-    // console.log(filteredArr);
 
   }
 
